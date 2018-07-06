@@ -51,6 +51,8 @@ final class UsageException extends Exception {
         + " normally.",
     "  --set-exit-if-changed",
     "    Return exit code 1 if there are any formatting changes.",
+    "  --skip-javadoc-formatting",
+    "    Do not format javadoc comments. Comments will still be trimmed, indented and fixed for missing asterisks.",
     "  --length, -length",
     "    Character length to format.",
     "  --lines, -lines, --line, -line",

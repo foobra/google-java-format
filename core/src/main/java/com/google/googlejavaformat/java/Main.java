@@ -96,7 +96,10 @@ public final class Main {
     }
 
     JavaFormatterOptions options =
-        JavaFormatterOptions.builder().style(parameters.aosp() ? Style.AOSP : Style.GOOGLE).build();
+        JavaFormatterOptions.builder()
+            .style(parameters.aosp() ? Style.AOSP : Style.GOOGLE)
+            .skipJavadocFormatting(parameters.skipJavaDocFormatting())
+            .build();
 
     if (parameters.stdin()) {
       return formatStdin(parameters, options);
